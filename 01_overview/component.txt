@@ -1,0 +1,100 @@
+COMPONENT---------------
+- everything which is big is component
+-compoent can have data.
+-data called state in the field of component
+-component can be in React return a piece of JSX code that tells what should be rendered on the screen.
+-Components in React allow developers to divide the page UI into many small parts. These parts work independently and can be used multiple times just like functions.
+
+-----------What are React Components?
+React Components are the building block of React Application. They are the reusable code blocks containing logics and and UI elements. They have the same purpose as JavaScript functions and return HTML. Components make the task of building UI much easier. 
+
+A UI is broken down into multiple individual pieces called components. You can work on components independently and then merge them all into a parent component which will be your final UI. 
+
+Components promote efficiency and scalability in web development by allowing developers to compose, combine, and customize them as needed.
+
+-----------Types of Components in React---------
+In React, we mainly have two types of components:
+
+Functional Components
+Class based Components
+Functional Component in React---
+Functional components are just like JavaScript functions that accept properties and return a React element.
+
+We can create a functional component in React by writing a JavaScript function. These functions may or may not receive data as parameters,
+Example: Create a function component called welcome.
+syntax--function demoComponent() {
+    return (<h1>
+                Welcome Message!
+            </h1>);
+}
+
+Class Component in React----
+The class components are a little more complex than the functional components. A class component can show inheritance and access data of other components.
+
+Class Component must include the line “extends React.Component” to pass data from one class component to another class component. We can use JavaScript ES6 classes to create class-based components in React.
+
+syntax---Example: Create a class component called welcome.
+
+class Democomponent extends React.Component {
+    render() {
+        return <h1>Welcome Message!</h1>;
+    }
+}
+
+Functional Component vs Class Component------
+A functional component is best suited for cases where the component doesn’t need to interact with other components or manage complex states. Functional components are ideal for presenting static UI elements or composing multiple simple components together under a single parent component.
+
+While class-based components can achieve the same result, they are generally less efficient compared to functional components. Therefore, it’s recommended to not use class components for general use.
+
+Rendering React Components---------
+Rendering Components means turning your component code into the UI that users see on the screen.
+
+React is capable of rendering user-defined components. To render a component in React we can initialize an element with a user-defined component and pass this element as the first parameter to ReactDOM.render() or directly pass the component as the first argument to the ReactDOM.render() method. 
+
+The below syntax shows how to initialize a component to an element: 
+
+const elementName = <ComponentName />;
+
+In the above syntax, the ComponentName is the name of the user-defined component. 
+Note: The name of a component should always start with a capital letter. This is done to differentiate a component tag from an HTML tag.
+
+Example: This example renders a component named Welcome to the Screen.----
+// Filename - src/index.js:
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+// This is a functional component
+const Welcome = () => {
+    return <h1>Hello World!</h1>;
+};
+
+ReactDOM.render(
+    <Welcome />,
+    document.getElementById("root")
+);
+
+
+Output: This output will be visible on the http://localhost:3000/ on the browser window.
+
+Explanation:
+
+Let us see step-wise what is happening in the above example: -------
+
+We call the ReactDOM.render() as the first parameter.
+React then calls the component Welcome, which returns <h1>Hello World!</h1>; as the result.
+Then the ReactDOM efficiently updates the DOM to match with the returned element and renders that element to the DOM element with id as “root”.
+
+Props--------
+Props(short for properties) are a way to pass data from the parent component to the child component.
+Props are like function arguments, you can use them as attributes in components.
+
+ex---function Message(props) {
+  return <h2>{props.text}</h2>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Message text="Hello, world!" />);
+
+imp--Components in Components
+We can call components inside another component
