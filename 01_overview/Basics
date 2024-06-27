@@ -1,0 +1,92 @@
+<!-- What is React ? -->
+
+React is a JavaScript library for building user interfaces (UIs) on the web. React is a declarative, component based library that allows developers to build reusable UI components and It follows the Virtual DOM (Document Object Model) approach, which optimizes rendering performance by minimizing DOM updates. React is fast and works well with other tools and libraries.
+
+<!-- Prerequisite of React -->
+
+For learning React first you have a clear understanding of HTML, CSS and JavaScript. As React is a JavaScript library and uses most of its concept so you really have to understands the major concepts of it.
+
+HTML and CSS
+JavaScript and ES6
+JSX (Javascript XML) & Babel
+Node+Npm
+Git and CLI (Command Line Interface).
+
+<!-- History of React -->
+
+React was invented by Facebook developers who found the traditional DOM slow. By implementing a virtual DOM, React addressed this issue and gained popularity rapidly.
+The current stable version of ReactJS is 18.2.0, released on June 14, 2022. The library continues to evolve, introducing new features with each update.
+
+<!-- How does React work? -->
+
+React is a JavaScript library for building user interfaces. It improves performance by using a virtual DOM, which is a lightweight copy of the actual DOM. When changes occur, React updates the virtual DOM first, compares it with the previous version, and then efficiently updates only the necessary parts of the actual DOM. This minimizes direct DOM manipulations, making the application faster and more efficient.
+
+<!-- Why Learn React JS? -->
+
+React, the popular JavaScript library, offers several exciting reasons for developers to learn it.
+
+First, React is flexible – once you learn its concepts, you can use it across various platforms to build quality user interfaces. Unlike a framework, React’s library approach allows it to evolve into a remarkable tool.
+
+Second, React has a great developer experience, making it easier to understand and write code. Third, it benefits from Facebook’s support and resources, ensuring regular bug fixes, enhancements, and documentation updates. Additionally, React’s broader community support, excellent performance, and ease of testing make it an ideal choice for web development.
+
+<!-- Features of React -->
+
+React is one of the most demanding JavaScript librarys because it is equipped with a ton of features which makes it faster and production-ready. Below are the few features of React.
+
+1. Component-Based Architecture
+   React provides the feature to break down the UI into smaller, self-contained components. Each component can have its own state and props.
+
+2. JSX (JavaScript Syntax Extension)
+   JSX is a syntax extension for JavaScript that allows developers to write HTML-like code within their JavaScript files. It makes React components more readable and expressive.
+
+const name="GeekforGeeks";
+const ele = <h1>Welcome to {name}</h1>;
+
+3. Virtual DOM
+   React maintains a lightweight representation of the actual DOM in memory. When changes occur, React efficiently updates only the necessary parts of the DOM.
+
+4. One-way Data Binding
+   One-way data binding, the name itself says that it is a one-direction flow. The data in react flows only in one direction i.e. the data is transferred from top to bottom i.e. from parent components to child components. The properties(props) in the child component cannot return the data to its parent component but it can have communication with the parent components to modify the states according to the provided inputs.
+
+5. Performance
+   As we discussed earlier, react uses virtual DOM and updates only the modified parts. So , this makes the DOM to run faster. DOM executes in memory so we can create separate components which makes the DOM run faster.
+
+6. Components
+   React divides the web page into multiple components as it is component-based. Each component is a part of the UI design which has its own logic and design . So the component logic which is written in JavaScript makes it easy and run faster and can be reusable.
+
+7. Single-Page Applications (SPAs)
+   React is recommended in creating SPAs, allowing smooth content updates without page reloads. Its focus on reusable components makes it ideal for real-time applications
+
+<!-- ReactJS Lifecycle -->
+
+Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence. React automatically calls these methods at different points in a component’s life cycle. Understanding these phases helps manage state, perform side effects, and optimize components effectively.
+
+1. Initialization
+   This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+
+2. Mounting Phase
+   Constructor: The constructor method initializes the component. It’s where you set up initial state and bind event handlers.
+   render(): This method returns the JSX representation of the component. It’s called during initial rendering and subsequent updates.
+   componentDidMount(): After the component is inserted into the DOM, this method is invoked. Use it for side effects like data fetching or setting timers.
+
+3. Updating Phase
+   componentDidUpdate(prevProps, prevState): Called after the component updates due to new props or state changes. Handle side effects here.
+   shouldComponentUpdate(nextProps, nextState): Determines if the component should re-render. Optimize performance by customizing this method.
+   render(): Again, the render() method reflects changes in state or props during updates.
+   
+4. Unmounting Phase
+   componentWillUnmount(): Invoked just before the component is removed from the DOM. Clean up resources (e.g., event listeners, timers).
+
+<!-- ReactJS Advantages -->
+
+Composable: We can divide these codes and put them in custom components. Then we can utilize those components and integrate them into one place.
+
+Declarative: In ReactJS, the DOM is declarative. We can make interactive UIs by changing the state of the component and ReactJS takes care of updating the DOM according to it.
+
+SEO Friendly: ReactJS affects the SEO by giving you a SPA (Single Page Application) which requires Javascript to show the content on the page which can be rendered and indexed.
+
+Community: ReactJS has a huge community because of its demand each company wants to work with ReactJS. Companies like Meta, Netflix, etc built on ReactJS.
+
+Easy to learn: HTML-like syntax of JSX makes you comfortable with the codes of React, it only requires a basic knowledge of HTML, CSS, and JS fundamentals to start working with it.
+
+Debugging is Easy: The debugging of ReactJS is unidirectional which means while designing any app using ReactJS the child components are nested within parent components. So, the data flow is in a single direction it gets more easier to debug errors.
